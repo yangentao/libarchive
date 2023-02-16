@@ -448,12 +448,15 @@ archive_compressor_zstd_write(struct archive_write_filter *f, const void *buff,
 	return __archive_write_program_write(f, data->pdata, buff, length);
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-parameter"
 static int
 archive_compressor_zstd_flush(struct archive_write_filter *f)
 {
 
 	return (ARCHIVE_OK);
 }
+#pragma clang diagnostic pop
 
 static int
 archive_compressor_zstd_close(struct archive_write_filter *f)

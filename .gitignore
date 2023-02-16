@@ -72,3 +72,7 @@ test-suite.log
 
 .sw?
 .*.sw?
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
